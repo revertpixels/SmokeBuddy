@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - SmokeBuddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="shield">
+                    <div class="quadrant q1"></div>
+                    <div class="quadrant q2"></div>
+                    <div class="quadrant q3"></div>
+                    <div class="quadrant q4"></div>
+                    <div class="banner"></div>
+                </div>
+            </div>
+            <h1>SmokeBuddy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Deliver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-step completed">
+            <div class="step-number">1</div>
+            <div class="step-text">Select Product</div>
+        </div>
+        <div class="progress-step completed">
+            <div class="step-number">2</div>
+            <div class="step-text">Location</div>
+        </div>
+        <div class="progress-step active">
+            <div class="step-number">3</div>
+            <div class="step-text">Payment</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">4</div>
+            <div class="step-text">Confirmation</div>
+        </div>
+    </div>
+
+    <section class="form-section">
+        <h2>Payment Options</h2>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+                <span>Product:</span>
+                <span id="summary-product">Marlboro x2</span>
+            </div>
+            <div class="summary-item">
+                <span>Extras:</span>
+                <span id="summary-extras">Lighter, Mints</span>
+            </div>
+            <div class="summary-item">
+                <span>Delivery Location:</span>
+                <span id="summary-location">School of Engineering, CSE Building, 2nd Floor</span>
+            </div>
+            <div class="summary-item">
+                <span>Risk Factor Fee:</span>
+                <span id="summary-risk">+₹10 (High Risk Zone)</span>
+            </div>
+            <div class="summary-item">
+                <span>Urgency Fee:</span>
+                <span id="summary-urgency">+₹15 (Code Red)</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total:</span>
+                <span id="summary-total">₹82</span>
+            </div>
+        </div>
+
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                <div class="payment-options">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cash" checked>
+                        <div class="payment-icon">💵</div>
+                        <div class="payment-text">Cash on Delivery</div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="upi">
+                        <div class="payment-icon">📱</div>
+                        <div class="payment-text">UPI</div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="favors">
+                        <div class="payment-icon">🤝</div>
+                        <div class="payment-text">Academic Favors</div>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="snacks">
+                        <div class="payment-icon">🍫</div>
+                        <div class="payment-text">Canteen Snacks</div>
+                    </label>
+                </div>
+            </div>
+
+            <div id="upi-details" class="form-group" style="display: none;">
+                <label for="upi-id">UPI ID:</label>
+                <input type="text" id="upi-id" name="upi-id" placeholder="yourid@bank">
+            </div>
+
+            <div id="favor-details" class="form-group" style="display: none;">
+                <label for="favor-type">What can you offer?</label>
+                <select id="favor-type" name="favor-type">
+                    <option value="" disabled selected>Select favor type</option>
+                    <option value="assignment">Assignment Help</option>
+                    <option value="notes">Class Notes</option>
+                    <option value="proxy">Attendance Proxy</option>
+                    <option value="project">Project Contribution</option>
+                </select>
+            </div>
+
+            <div id="snack-details" class="form-group" style="display: none;">
+                <label for="snack-type">What snacks can you offer?</label>
+                <select id="snack-type" name="snack-type">
+                    <option value="" disabled selected>Select snack type</option>
+                    <option value="chips">Chips/Kurkure</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="samosa">Samosa (2 pcs)</option>
+                    <option value="coffee">Coffee</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="delivery-code">Create a Secret Code:</label>
+                <input type="text" id="delivery-code" name="delivery-code" placeholder="For verification at delivery (e.g. 'blue pen')" required>
+                <div class="hint">This code will be used by the delivery person to verify your identity</div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn secondary" onclick="window.location.href='location.html'">Back</button>
+                <button type="button" class="btn primary" onclick="window.location.href='confirmation.html'">Complete Order</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 SmokeBuddy - A Fictional Service</p>
+        <p class="disclaimer">This is a fictional website created for fun and illustrative purposes only. We do not actually deliver cigarettes or encourage smoking.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

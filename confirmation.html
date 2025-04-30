@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - SmokeBuddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="shield">
+                    <div class="quadrant q1"></div>
+                    <div class="quadrant q2"></div>
+                    <div class="quadrant q3"></div>
+                    <div class="quadrant q4"></div>
+                    <div class="banner"></div>
+                </div>
+            </div>
+            <h1>SmokeBuddy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Deliver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-step completed">
+            <div class="step-number">1</div>
+            <div class="step-text">Select Product</div>
+        </div>
+        <div class="progress-step completed">
+            <div class="step-number">2</div>
+            <div class="step-text">Location</div>
+        </div>
+        <div class="progress-step completed">
+            <div class="step-number">3</div>
+            <div class="step-text">Payment</div>
+        </div>
+        <div class="progress-step completed">
+            <div class="step-number">4</div>
+            <div class="step-text">Confirmation</div>
+        </div>
+    </div>
+
+    <section class="confirmation-section">
+        <div class="confirmation-icon">✅</div>
+        <h2>Order Confirmed!</h2>
+        <p class="confirmation-message">Your smoke break is on the way!</p>
+
+        <div class="order-details">
+            <h3>Order #SB2025042</h3>
+
+            <div class="detail-card">
+                <div class="detail-header">Delivery ETA</div>
+                <div class="detail-content">
+                    <div class="eta-time">12:45 PM</div>
+                    <div class="eta-countdown">(Approximately 8 minutes)</div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-header">Your Buddy</div>
+                <div class="detail-content">
+                    <div class="delivery-person">Smoke Ninja</div>
+                    <div class="rating">⭐⭐⭐⭐⭐ (98% Success Rate)</div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-header">Delivery Location</div>
+                <div class="detail-content location-details">
+                    School of Engineering and Technology<br>
+                    CSE Building, 2nd Floor<br>
+                    Bathroom near Staircase
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-header">Secret Code</div>
+                <div class="detail-content secret-code">
+                    "blue pen"
+                </div>
+            </div>
+        </div>
+
+        <div class="delivery-tips">
+            <h3>Delivery Tips</h3>
+            <ul>
+                <li>Be present at the specified location on time</li>
+                <li>Keep your phone on vibrate mode</li>
+                <li>Remember your secret code for verification</li>
+                <li>Act casual, don't draw attention</li>
+                <li>If faculty approaches, your buddy will abort temporarily</li>
+            </ul>
+        </div>
+
+        <div class="faculty-alert">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-text">
+                <h4>Faculty Alert</h4>
+                <p>Prof. Sharma is currently patrolling the CSE building. Your Smoke Buddy will exercise extra caution.</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn secondary" onclick="window.location.href='index.html'">Back to Home</button>
+            <button class="btn primary" onclick="window.location.href='tracker.html'">Track Delivery</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 SmokeBuddy - A Fictional Service</p>
+        <p class="disclaimer">This is a fictional website created for fun and illustrative purposes only. We do not actually deliver cigarettes or encourage smoking.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

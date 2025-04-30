@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Deliverer - SmokeBuddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="shield">
+                    <div class="quadrant q1"></div>
+                    <div class="quadrant q2"></div>
+                    <div class="quadrant q3"></div>
+                    <div class="quadrant q4"></div>
+                    <div class="banner"></div>
+                </div>
+            </div>
+            <h1>SmokeBuddy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li class="active"><a href="sell.html">Deliver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Become a SmokeBuddy Deliverer</h2>
+        <p class="section-intro">Want to make some extra pocket money and help fellow students? Join our network of discreet cigarette deliverers!</p>
+
+        <form id="seller-form">
+            <div class="form-group">
+                <label for="nickname">Your Deliverer Nickname:</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Choose a discreet nickname (e.g. 'Smoke Ninja')" required>
+            </div>
+
+            <div class="form-group">
+                <label for="availability">Your Availability:</label>
+                <div class="checkbox-group stacked">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="availability" value="morning">
+                        <span class="checkbox-text">Morning (9 AM - 12 PM)</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="availability" value="afternoon">
+                        <span class="checkbox-text">Afternoon (12 PM - 3 PM)</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="availability" value="evening">
+                        <span class="checkbox-text">Evening (3 PM - 6 PM)</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="availability" value="night">
+                        <span class="checkbox-text">Night Classes (6 PM - 9 PM)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="expertise">Rate your stealth skills:</label>
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="stealth" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="stealth" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="stealth" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="stealth" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="stealth" value="1">
+                    <label for="star1"></label>
+                </div>
+                <div class="rating-text">5 stars = Ninja level stealth</div>
+            </div>
+
+            <div class="form-group">
+                <label for="coverage-areas">Your Coverage Areas:</label>
+                <div class="checkbox-group stacked">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="engineering">
+                        <span class="checkbox-text">School of Engineering and Technology</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="sciences">
+                        <span class="checkbox-text">School of Basic and Applied Sciences</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="liberal">
+                        <span class="checkbox-text">School of Liberal Arts and Culture Studies</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="business">
+                        <span class="checkbox-text">School of Business and Economics</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="law">
+                        <span class="checkbox-text">School of Law and Justice</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="media">
+                        <span class="checkbox-text">School of Media and Communication</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="coverage" value="other">
+                        <span class="checkbox-text">Other Schools</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inventory">Your Inventory:</label>
+                <div class="inventory-grid">
+                    <div class="inventory-item">
+                        <span class="item-name">Classic</span>
+                        <input type="number" min="0" max="20" value="0">
+                    </div>
+                    <div class="inventory-item">
+                        <span class="item-name">Gold Flake</span>
+                        <input type="number" min="0" max="20" value="0">
+                    </div>
+                    <div class="inventory-item">
+                        <span class="item-name">Marlboro</span>
+                        <input type="number" min="0" max="20" value="0">
+                    </div>
+                    <div class="inventory-item">
+                        <span class="item-name">Wills</span>
+                        <input type="number" min="0" max="20" value="0">
+                    </div>
+                    <div class="inventory-item">
+                        <span class="item-name">Biri</span>
+                        <input type="number" min="0" max="20" value="0">
+                    </div>
+                    <div class="inventory-item">
+                        <span class="item-name">Lighters</span>
+                        <input type="number" min="0" max="5" value="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="special-skills">Special Skills (Optional):</label>
+                <div class="checkbox-group stacked">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="skills" value="faculty-tracking">
+                        <span class="checkbox-text">Faculty Tracking (I know the patrol schedules)</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="skills" value="hidden-spots">
+                        <span class="checkbox-text">Knowledge of Hidden Spots</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="skills" value="quick-delivery">
+                        <span class="checkbox-text">Lightning Fast Delivery</span>
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="skills" value="multiple-buildings">
+                        <span class="checkbox-text">Multi-Building Access</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="earnings">Payment Preference:</label>
+                <select id="earnings" name="earnings" required>
+                    <option value="" disabled selected>How do you want to get paid?</option>
+                    <option value="cash">Cash</option>
+                    <option value="upi">UPI</option>
+                    <option value="favors">Academic Favors</option>
+                    <option value="commission">Product Commission (Keep some for yourself)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="referral">Referred By (Optional):</label>
+                <input type="text" id="referral" name="referral" placeholder="Enter deliverer nickname if someone referred you">
+            </div>
+
+            <div class="terms-container">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="terms" required>
+                    <span class="checkbox-text">I understand this is a fictional website and just for fun</span>
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn secondary" onclick="window.location.href='index.html'">Back</button>
+                <button type="button" class="btn primary" onclick="window.location.href='seller-confirmation.html'">Submit Application</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 SmokeBuddy - A Fictional Service</p>
+        <p class="disclaimer">This is a fictional website created for fun and illustrative purposes only. We do not actually deliver cigarettes or encourage smoking.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - SmokeBuddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <div class="shield">
+                    <div class="quadrant q1"></div>
+                    <div class="quadrant q2"></div>
+                    <div class="quadrant q3"></div>
+                    <div class="quadrant q4"></div>
+                    <div class="banner"></div>
+                </div>
+            </div>
+            <h1>SmokeBuddy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Deliver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-step completed">
+            <div class="step-number">1</div>
+            <div class="step-text">Select Product</div>
+        </div>
+        <div class="progress-step active">
+            <div class="step-number">2</div>
+            <div class="step-text">Location</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">3</div>
+            <div class="step-text">Payment</div>
+        </div>
+        <div class="progress-step">
+            <div class="step-number">4</div>
+            <div class="step-text">Confirmation</div>
+        </div>
+    </div>
+
+    <section class="form-section">
+        <h2>Where Should We Deliver?</h2>
+        <form id="location-form">
+            <div class="form-group">
+                <label for="school">School/Department:</label>
+                <select id="school" name="school" required onchange="updateBuilding()">
+                    <option value="" disabled selected>Select your school</option>
+                    <option value="engineering">School of Engineering and Technology</option>
+                    <option value="sciences">School of Basic and Applied Sciences</option>
+                    <option value="liberal">School of Liberal Arts and Culture Studies</option>
+                    <option value="business">School of Business and Economics</option>
+                    <option value="law">School of Law and Justice</option>
+                    <option value="media">School of Media and Communication</option>
+                    <option value="education">School of Education</option>
+                    <option value="lifescience">School of Life Science & Biotechnology</option>
+                    <option value="medical">School of Medical Sciences</option>
+                    <option value="agriculture">School of Smart Agriculture</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="building-container" style="display: none;">
+                <label for="building">Building/Department:</label>
+                <select id="building" name="building">
+                    <option value="" disabled selected>Select your building/department</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="floor">Floor:</label>
+                <select id="floor" name="floor" required>
+                    <option value="" disabled selected>Select floor</option>
+                    <option value="ground">Ground Floor</option>
+                    <option value="first">1st Floor</option>
+                    <option value="second">2nd Floor</option>
+                    <option value="third">3rd Floor</option>
+                    <option value="fourth">4th Floor</option>
+                    <option value="fifth">5th Floor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bathroom">Bathroom Location:</label>
+                <select id="bathroom" name="bathroom" required>
+                    <option value="" disabled selected>Select bathroom location</option>
+                    <option value="near_stairs">Near Staircase</option>
+                    <option value="near_lift">Near Elevator</option>
+                    <option value="end_corridor">End of Corridor</option>
+                    <option value="cafeteria">Near Cafeteria</option>
+                    <option value="library">Near Library</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Additional Instructions (Optional):</label>
+                <textarea id="remarks" name="remarks" placeholder="Any specific instructions for the delivery? E.g., 'Third stall from the left', 'Meet at the sink', etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <div class="risk-meter">
+                    <label>Risk Assessment:</label>
+                    <div class="meter">
+                        <div class="meter-level high" id="risk-level"></div>
+                    </div>
+                    <div class="meter-label" id="risk-label">High Risk Zone! Faculty frequent this area.</div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn secondary" onclick="window.location.href='buy.html'">Back</button>
+                <button type="button" class="btn primary" onclick="window.location.href='payment.html'">Next Step</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 SmokeBuddy - A Fictional Service</p>
+        <p class="disclaimer">This is a fictional website created for fun and illustrative purposes only. We do not actually deliver cigarettes or encourage smoking.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
